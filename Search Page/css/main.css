@@ -99,3 +99,7 @@ input{
     background-color: 	rgb(255,140,0);
     padding: 5px;
 }
+
+.Search_btn:hover{
+    background-color: 	rgb(238, 131, 0);
+}
