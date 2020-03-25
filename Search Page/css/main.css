@@ -1,0 +1,101 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    font-family: 'Saira Condensed', sans-serif;
+    list-style-type: none;
+    border: none;
+    color: white;
+}
+
+body{
+    font-family: 'Saira Condensed', sans-serif;
+    background-image: url(../images/Background_1.jpg);
+    background-size: 2000px;
+    background-position: center;
+}
+
+.Logo{
+    width: 2.5em;
+    height: 2.5em;
+    margin-top: 0.5em;
+    margin-bottom: auto;
+    margin-left: 0.4em;
+    float: left;
+}
+
+nav{
+    background-color: rgb(65,105,225);
+    height: 60px;
+    width: 100%;
+    display: flex;
+    position: fixed;
+    top: 0;
+    
+}
+
+nav ul li{
+    display: block;
+    list-style-type: none;
+    line-height: 60px;
+    margin: 0 5px;
+    padding: 0 5px;   
+}
+
+nav ul{
+    margin-left: 8%;
+    margin-right: 8%;
+    flex-grow: 1;
+    justify-content: space-between;
+    display: flex;
+    font-size: large;
+}
+
+li:hover{
+    background: rgb(255,140,0);
+    cursor: pointer;
+}
+
+h1{
+    margin-top: -0.15em;
+    margin-bottom: -0.3em;
+    text-align: center;
+}
+
+h2{
+    margin-top: 0.3em;
+    margin-bottom: 0.3em;
+}
+
+.Search_Page{
+    margin: 100px auto 0;
+    text-align: left;
+    background-color: 	rgb(65,105,225,0.9);
+    width: 200px;
+    padding: 0.5em 0.5em 1.2em 0.5em;
+    color: white;
+    box-shadow: 0em 0em 2em 0.25em black; 
+}
+
+input{
+    background-color: white;
+    padding: 5px;
+    width: 115px;
+    outline: none;
+    font-family: 'Saira Condensed', sans-serif; 
+    color: black;
+}
+
+.Where{
+    width: 191px;
+}
+
+.Search_btn{
+    margin-top: 19px;
+    width: 100%;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: medium;
+    background-color: 	rgb(255,140,0);
+    padding: 5px;
+}
