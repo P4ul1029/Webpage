@@ -3,6 +3,7 @@ body{
     background-image: url(../images/Background_1.jpg);
     background-size: 1750px;
     background-position: center;
+    padding-bottom: 40px;
 }
 
 .Logo{

@@ -13,6 +13,7 @@ body{
     background-image: url(../images/Background_1.jpg);
     background-size: 3000px;
     background-position: center;
+    padding-bottom: 40px;
 }
 
 .Logo{
@@ -64,13 +65,20 @@ li:hover{
 
 input{
     color: black;
+    padding: 5px;
+}
+
+.Rent{
+    background-color: rgb(255,140,0);
+    padding: 0 5px;
+    border-radius: 5px;
 }
 
 .House{
     margin: 100px auto 0;
     text-align: left;
     background-color: 	rgb(65,105,225,0.9);
-    width: 200px;
+    width: 209px;
     padding: 0.5em 0.5em 1.2em 0.5em;
     color: white;
     box-shadow: 0em 0em 2em 0.25em black; 
@@ -88,7 +96,7 @@ input, select, option{
     margin: 40px auto 0;
     text-align: left;
     background-color: 	rgb(65,105,225,0.9);
-    width: 200px;
+    width: 209px;
     padding: 0.5em 0.5em 1.2em 0.5em;
     color: white;
     box-shadow: 0em 0em 2em 0.25em black; 
@@ -120,7 +128,7 @@ input, select, option{
     margin: 40px auto 0;
     text-align: left;
     background-color: 	rgb(65,105,225,0.9);
-    width: 200px;
+    width: 209px;
     padding: 0.5em 0.5em 1.2em 0.5em;
     color: white;
     box-shadow: 0em 0em 2em 0.25em black; 
@@ -130,6 +138,7 @@ input, select, option{
 .Numbers input{
     width: 120px;
     float: right;
+    padding: 0 5px;
 }
 
 .check{
@@ -150,14 +159,18 @@ input, select, option{
 }
 
 .Submission{
-    margin: 40px auto 40px;
+    margin: 40px auto 0;
     text-align: left;
     background-color: 	rgb(65,105,225,0.9);
-    width: 200px;
+    width: 209px;
     padding: 0.5em 0.5em 1.2em 0.5em;
     color: white;
     box-shadow: 0em 0em 2em 0.25em black; 
     color: white;
+}
+
+.Submission input{
+    padding: 0;
 }
 
 .Numbers h1{
