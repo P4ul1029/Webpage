@@ -1,0 +1,35 @@
+NAVIGATION BAR
+- Log Out Button: Set up logging out (backend, PHP?).
+- Currency Button: Set up the currency dropdown menu (its currently on display : none in CSS)
+- Booked Homes Button: Provide a dropdown of all the homes the user has booked
+- Listed Homes Button: Provide a dropdown of all the homes the user has listed
+
+Sign In Page
+- Set up user authorization on the backend (PHP?)
+- Set up input validation, i.e. do not proceed to next page if inputs are left blank or wrong info is provivded
+
+Sign Up Page
+- Store inputs into DB
+- Set up input validation, i.e. do not proceed if inputs are left blank or wrong info is provivded
+
+Search Page
+- Input validation
+
+Results Page
+- Display matching houses based on inputs from the search page, i.e. query the DB for matching houses
+- Populate houses in a HTML table?
+
+Booking Page
+- If someone clicks on a house from the results page, this page must the house's information
+- Allow users to book the house and add their scheduled time to the DB
+
+Booked Page
+- If someone clicks on a house from the Booked Homes dropdown menu, display all the information about their booking
+
+Host a Home
+- Validate inputs
+- Ensure only image files are uploaded
+- Create house in the DB based on inputs
+
+Listed Home Page
+- If someone clicks on a house from the Listed Homes dropdown menu, display all the info about that house and its bookings 

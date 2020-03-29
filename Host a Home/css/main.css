@@ -68,6 +68,11 @@ input{
     padding: 5px;
 }
 
+textarea{
+    color: black;
+    padding: 5px;
+}
+
 .Rent{
     background-color: rgb(255,140,0);
     padding: 0 5px;
