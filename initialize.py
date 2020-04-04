@@ -51,233 +51,183 @@ class DataSource(object):
     Madrid_Reviews_Data = data_source_files.get('Madrid_Reviews_Data')
     Madrid_Reviews_Summary_Data = data_source_files.get('Madrid_Reviews_Summary_Data')
 
-
     def __init__(self,
-                 populate_berlin_calendar_data=False,
-                 populate_berlin_listings_data=False,
-                 # populate_berlin_neighbourhoods_data=False,
-                 populate_berlin_reviews_data=False,
-
-                 populate_boston_calendar_data=False,
-                 populate_boston_listings_data=False,
-                 populate_boston_reviews_data=False,
-
-                 populate_madrid_calendar_data=False,
-                 populate_madrid_listings_data=False,
-                 # populate_madrid_neighbourhoods_data=False,
-                 populate_madrid_reviews_data=False):
+                 populate_calendar_data=False,
+                 populate_listings_data=False,
+                 populate_reviews_data=False):
 
         # POPULATE CALENDAR DATA
-        self.populate_berlin_calendar_data = populate_berlin_calendar_data
-        self.populate_boston_calendar_data = populate_boston_calendar_data
-        self.populate_madrid_calendar_data = populate_madrid_calendar_data
+        self.populate_calendar_data = populate_calendar_data
 
         # POPULATE LISTINGS DATA
-        self.populate_berlin_listings_data = populate_berlin_listings_data
-        self.populate_boston_listings_data = populate_boston_listings_data
-        self.populate_madrid_listings_data = populate_madrid_listings_data
-
-        # POPULATE NEIGHBOURHOODS DATA
-        # self.populate_berlin_neighbourhoods_data = populate_berlin_neighbourhoods_data
-        # self.populate_madrid_neighbourhoods_data = populate_madrid_neighbourhoods_data
+        self.populate_listings_data = populate_listings_data
 
         # POPULATE REVIEWS DATA
-        self.populate_berlin_reviews_data = populate_berlin_reviews_data
-        self.populate_boston_reviews_data = populate_boston_reviews_data
-        self.populate_madrid_reviews_data = populate_madrid_reviews_data
+        self.populate_reviews_data = populate_reviews_data
 
     def populate(self):
 
-        if self.populate_berlin_calendar_data:
-            self.populate_berlin_calendar_table()
-        if self.populate_boston_calendar_data:
-            self.populate_boston_calendar_table()
-        if self.populate_madrid_calendar_data:
-            self.populate_madrid_calendar_table()
-
-        if self.populate_berlin_listings_data:
-            self.populate_berlin_listings_table()
-        if self.populate_boston_listings_data:
-            self.populate_boston_listings_table()
-        if self.populate_madrid_listings_data:
-            self.populate_madrid_listings_table()
-
-        # if self.populate_berlin_neighbourhoods_data:
-        #     self.populate_berlin_neighbourhoods_table()
-        # if self.populate_madrid_neighbourhoods_data:
-        #     self.populate_madrid_neighbourhoods_table()
-
-        if self.populate_berlin_reviews_data:
-            self.populate_berlin_reviews_table()
-        if self.populate_boston_reviews_data:
-            self.populate_boston_reviews_table()
-        if self.populate_madrid_reviews_data:
-            self.populate_madrid_reviews_table()
+        if self.populate_calendar_data:
+            self.populate_calendar_table()
+        if self.populate_listings_data:
+            self.populate_listings_table()
+        if self.populate_reviews_data:
+            self.populate_reviews_table()
 
 
 
-    def populate_berlin_calendar_table(self):
-        print("data_source_files.Berlin_Calendar_Data...")
+    def populate_calendar_table(self):
+        print("data_source.berlin_calendar_data...")
 
-        sql = """COPY data_source_files.Berlin_Calendar_Data(
-                                    collision_id, 
-                                    location, 
-                                    x, 
-                                    y, 
-                                    longitude, 
-                                    latitude, 
-                                    date, 
-                                    time, 
-                                    environment, 
-                                    light, 
-                                    surface_condition, 
-                                    traffic_control, 
-                                    traffic_control_condition, 
-                                    collision_classification, 
-                                    impact_type, 
-                                    no_of_pedestrians)
-                                 FROM STDIN CSV HEADER NULL ''"""
+        sql = """COPY data_source.calendar_data(
+                listing_id,
+                date,
+                available,
+                price)
+                FROM STDIN CSV HEADER NULL ''"""
 
-        self.copy_data_from_csv(self.collision_data_ottawa_2014, sql)
-        self.copy_data_from_csv(self.collision_data_ottawa_2015, sql)
-        self.copy_data_from_csv(self.collision_data_ottawa_2016, sql)
-        self.copy_data_from_csv(self.collision_data_ottawa_2017, sql)
+        self.copy_data_from_csv(self.Berlin_Calendar_Data, sql)
+        print(self.Berlin_Calendar_Data + " successfully inserted into db")
+        self.copy_data_from_csv(self.Boston_Calendar_Data, sql)
+        print(self.Boston_Calendar_Data + " successfully inserted into db")
+        self.copy_data_from_csv(self.Madrid_Calendar_Data, sql)
+        print(self.Madrid_Calendar_Data + " successfully inserted into db")
 
-        print("data_source.collision_data_ottawa successfully populated.")
+        print("data_source.calendar_data successfully populated.")
 
 
-    def populate_toronto_collision_table(self):
-        print("Populating data_source.collision_data_toronto...")
+    def populate_listings_table(self):
+        print("Populating data_source.listings_data...")
 
-        sql = """COPY data_source.collision_data_toronto(
-                                    x, y, index_, accnum, year, date, time, hour, street1, street2, "offset",
-                                    road_class, district, latitude, longitude, loccoord, accloc, traffctl,
-                                    visibility, light, rdsfcond, acclass, impactype, invtype, invage, injury, fatal_no,
-                                    initdir, vehtype, manoeuver, drivact, drivcond, pedtype, pedact, pedcond, 
-                                    cyclistype, cycact, cyccond, pedestrian, cyclist, automobile, motorcycle, truck, 
-                                    trsn_city_veh, emerg_veh, passenger, speeding, ag_driv, redlight, alcohol, 
-                                    disability, division, ward_name, ward_id, hood_id, hood_name, fid)
-                                 FROM STDIN CSV HEADER NULL ''"""
+        sql = """COPY data_source.listings_data(
+                id  SERIAL,
+                listing_url TEXT,
+                scrape_id   SERIAL,
+                last_scraped    SERIAL,
+                name TEXT,
+                summary TEXT,
+                space   TEXT,
+                description TEXT,
+                experiences_offered TEXT,
+                neighborhood_overview TEXT,
+                notes   TEXT,
+                transit TEXT,
+                access  TEXT,
+                interaction TEXT,
+                house_rules TEXT,
+                thumbnail_url   TEXT,
+                medium_url  TEXT,
+                picture_url TEXT,
+                xl_picture_url  TEXT,
+                host_id SERIAL,
+                host_url    TEXT,
+                host_name   TEXT,
+                host_since  INT,
+                host_location   TEXT,
+                host_about  TEXT,
+                host_response_time  TEXT,
+                host_response_rate  DECIMAL(5),
+                host_acceptance_rate DECIMAL(5),
+                host_is_superhost BOOLEAN,
+                host_thumbnail_url  TEXT,
+                host_picture_url    TEXT,
+                host_neighbourhood TEXT,
+                host_listings_count INT,
+                host_total_listings_count   INT,
+                host_verifications  TEXT,
+                host_has_profile_pic    BOOLEAN,
+                host_identity_verified  BOOLEAN,
+                street  TEXT,
+                neighbourhood   TEXT,
+                neighbourhood_cleansed  TEXT,
+                neighbourhood_group_cleansed TEXT,
+                city    TEXT,
+                state TEXT,
+                zipcode INT,
+                market  TEXT,
+                smart_location  TEXT,
+                country_code    TEXT,
+                country TEXT,
+                latitude    DECIMAL(15),
+                longitude   DECIMAL(15),
+                is_location_exact   BOOLEAN,
+                property_type   TEXT,
+                room_type   TEXT,
+                accomodates INT,
+                bathrooms   INT,
+                bedrooms    INT,
+                beds    INT,
+                bed_type    TEXT,
+                amenities   TEXT,
+                square_feet  INT,
+                price   INT,
+                weekly_price    INT,
+                monthly_price   INT,
+                security_deposit    INT,
+                cleaning_fee    INT,
+                guests_included INT,
+                extra_people    INT,
+                minimum_nights  INT,
+                maximum_nights  INT,
+                calendar_updated    TEXT,
+                has_availability    BOOLEAN,
+                availability_30     INT,
+                availability_60     INT,
+                availability_90     INT,
+                availability_365     INT,
+                calendar_last_scraped   INT,
+                number_of_reviews   INT,
+                first_review    INT,
+                last_review     INT,
+                review_scores_rating    INT,
+                review_scores_accuracy    INT,
+                review_scores_cleanliness    INT,
+                review_scores_checkin    INT,
+                review_scores_communication    INT,
+                review_scores_location    INT,
+                review_scores_value    INT,
+                requires_license    BOOLEAN,
+                license     TEXT,
+                jurisdiction_names  TEXT,
+                instant_bookable    BOOLEAN,
+                is_business_travel_ready    BOOLEAN,
+                cancellation_policy     TEXT,
+                require_guest_profile_picture   BOOLEAN,
+                require_guest_phone_verification   BOOLEAN,
+                calculated_host_listings_count  INT,
+                reviews_per_month   DECIMAL(2),
+                PRIMARY KEY(id))
+                FROM STDIN CSV HEADER NULL ''"""
 
-        self.copy_data_from_csv(self.collision_data_toronto, sql)
+        self.copy_data_from_csv(self.Berlin_Listings_Data, sql)
+        print(self.Berlin_Listings_Data + " successfully inserted into db")
+        self.copy_data_from_csv(self.Boston_Listings_Data, sql)
+        print(self.Boston_Listings_Data + " successfully inserted into db")
+        self.copy_data_from_csv(self.Madrid_Listings_Data, sql)
+        print(self.Madrid_Listings_Data + " successfully inserted into db")
 
-        print("data_source.collision_data_toronto successfully populated.")
+        print("data_source.listings_data successfully populated.")
 
-    def populate_ontario_climate_table(self):
-        print("Populating data_source.climate_data_ontario...")
-
-        sql = """COPY data_source.climate_data_ontario(
-                                    date_time, year, month, day, time, temp_c, temp_flag, dew_point_temp_c,
-                                    dew_point_temp_flag, rel_hum_percent, rel_hum_flag, wind_dir_10s_deg,
-                                    wind_dir_flag, wind_spd_km_h, wind_spd_flag, visibility_km, visibility_flag,
-                                    stn_press_kpa, stn_press_flag, hmdx, hmdx_flag, wind_chill, wind_chill_flag,
-                                    weather, station_name, province)
-                                 FROM STDIN CSV HEADER NULL ''"""
-
-        self.copy_data_from_csv(self.climate_data_ontario_1, sql)
-        print(self.climate_data_ontario_1 + " successfully inserted into db")
-
-        self.copy_data_from_csv(self.climate_data_ontario_2, sql)
-        print(self.climate_data_ontario_2 + " successfully inserted into db")
-
-        self.copy_data_from_csv(self.climate_data_ontario_3, sql)
-        print(self.climate_data_ontario_3 + " successfully inserted into db")
-
-        self.copy_data_from_csv(self.climate_data_ontario_4, sql)
-        print(self.climate_data_ontario_4 + " successfully inserted into db")
-
-        self.copy_data_from_csv(self.climate_data_ontario_5, sql)
-        print(self.climate_data_ontario_5 + " successfully inserted into db")
-
-        self.copy_data_from_csv(self.climate_data_ontario_6, sql)
-        print(self.climate_data_ontario_6 + " successfully inserted into db")
-
-        print("data_source.climate_data_ontario successfully populated.")
-
-    def populate_alberta_climate_table(self):
-        print("Populating data_source.climate_data_alberta...")
+    def populate_reviews_data(self):
+        print("Populating data_source.reviews_data...")
 
         sql = """COPY data_source.climate_data_alberta(
-                                    date_time, year, month, day, time, temp_c, temp_flag, dew_point_temp_c,
-                                    dew_point_temp_flag, rel_hum_percent, rel_hum_flag, wind_dir_10s_deg,
-                                    wind_dir_flag, wind_spd_km_h, wind_spd_flag, visibility_km, visibility_flag,
-                                    stn_press_kpa, stn_press_flag, hmdx, hmdx_flag, wind_chill, wind_chill_flag,
-                                    weather, station_name, province)
-                                 FROM STDIN CSV HEADER NULL ''"""
+                listing_id      SERIAL,
+                id      INT,
+                date TIMESTAMP,
+                reviewer_id     INT,
+                reviewer_name   TEXT,
+                comments    TEXT)
+                FROM STDIN CSV HEADER NULL ''"""
 
-        self.copy_data_from_csv(self.climate_data_alberta_1, sql)
-        print(self.climate_data_alberta_1 + " successfully inserted into db")
+        self.copy_data_from_csv(self.Berlin_Reviews_Data, sql)
+        print(self.Berlin_Reviews_Data + " successfully inserted into db")
+        self.copy_data_from_csv(self.Boston_Reviews_Data, sql)
+        print(self.Boston_Reviews_Data + " successfully inserted into db")
+        self.copy_data_from_csv(self.Madrid_Reviews_Data, sql)
+        print(self.Madrid_Reviews_Data + " successfully inserted into db")
 
-        self.copy_data_from_csv(self.climate_data_alberta_2, sql)
-        print(self.climate_data_alberta_2 + " successfully inserted into db")
-
-        self.copy_data_from_csv(self.climate_data_alberta_3, sql)
-        print(self.climate_data_alberta_3 + " successfully inserted into db")
-
-        self.copy_data_from_csv(self.climate_data_alberta_4, sql)
-        print(self.climate_data_alberta_4 + " successfully inserted into db")
-
-        self.copy_data_from_csv(self.climate_data_alberta_5, sql)
-        print(self.climate_data_alberta_5 + " successfully inserted into db")
-
-        self.copy_data_from_csv(self.climate_data_alberta_6, sql)
-        print(self.climate_data_alberta_6 + " successfully inserted into db")
-
-        print("data_source.climate_data_alberta successfully populated.")
-
-    # def populate_calgary_climate_table(self):
-    #     print("Populating data_source.climate_data_calgary...")
-    #
-    #     sql = """CREATE TABLE data_source.climate_data_calgary AS
-    #              SELECT * FROM data_source.climate_data_alberta
-    #              WHERE station_name in %s"""
-    #
-    #     self.create_filtered_stations_table(sql, CALGARY_STATIONS)
-    #
-    #     print("data_source.climate_data_calgary successfully populated.")
-
-    def populate_ottawa_climate_table(self):
-        print("Populating data_source.climate_data_ottawa...")
-
-        sql = """CREATE TABLE data_source.climate_data_ottawa AS
-                 SELECT * FROM data_source.climate_data_ontario
-                 WHERE station_name in %s"""
-
-        self.create_filtered_stations_table(sql, OTTAWA_STATIONS)
-
-        print("data_source.climate_data_ottawa successfully populated.")
-
-    def populate_toronto_climate_table(self):
-        print("Populating data_source.climate_data_toronto...")
-
-        sql = """CREATE TABLE data_source.climate_data_toronto AS
-                 SELECT * FROM data_source.climate_data_ontario
-                 WHERE station_name in %s"""
-
-        self.create_filtered_stations_table(sql, TORONTO_STATIONS)
-
-        print("data_source.climate_data_toronto successfully populated.")
-
-    def populate_raw_station_inventory_table(self):
-        print("Populating data_source.raw_station_inventory...")
-
-        sql = """COPY data_source.raw_station_inventory(name, latitude, longitude, elevation) 
-                 FROM STDIN CSV HEADER NULL ''"""
-
-        self.copy_data_from_csv(self.raw_station_inventory_file, sql)
-
-        print("data_source.raw_station_inventory successfully populated.")
-
-    def populate_station_inventory_table(self):
-        print("Populating data_source.station_inventory...")
-
-        sql = """CREATE TABLE data_source.station_inventory AS
-                 SELECT DISTINCT ON (name) * FROM data_source.raw_station_inventory
-                 WHERE name in %s"""
-
-        self.create_filtered_stations_table(sql, WEATHER_STATIONS)
-
-        print("data_source.station_inventory successfully populated.")
+        print("data_source.reviews_data successfully populated.")
 
     @staticmethod
     def create_filtered_stations_table(sql, stations):
