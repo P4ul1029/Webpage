@@ -26,6 +26,16 @@ h2{
     margin-bottom: 0.3em;
 }
 
+.error{
+    margin-top: 5px;
+    margin-bottom: -10px;
+    width: 100%;
+    text-align: center;
+    font-size: large;
+    font-weight: 600;
+    color: rgb(0, 0, 0);
+}
+
 .Sign_Up_Page{
     margin: 3% auto 0;
     text-align: left;

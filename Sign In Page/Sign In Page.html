@@ -6,24 +6,26 @@
     <title>Sign In Page</title>
     <link href="https://fonts.googleapis.com/css?family=Saira+Condensed&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
+    <script defer src="script.js"></script>
 </head>
 <body>
     <header>
         <img src="images/Logo.png" alt="Logo" class="Logo">
-        <a href="../Sign Up Page/Sign Up Page.html"><button type="button" class="Sign_Up_Button">SIGN UP</button></a>    
+        <button type="button" onclick="location.href='../Sign Up Page/Sign Up Page.html'" class="Sign_Up_Button">SIGN UP</button>
+        <!--<a href="../Sign Up Page/Sign Up Page.html"></a>-->
     </header>
     
     <div class = "Sign_In_Page">
         <h1>SIGN IN</h1>
-
-        <form>
+        <form id="form" action="/" method="GET"> 
+            <div id="error" class="error"></div>
             <h2>EMAIL</h2>
-            <input type="email" class="Input_box" placeholder="Enter Your Email" spellcheck="false">
+            <input type="email" id="email" class="Input_box" placeholder="Enter Your Email" spellcheck="false" required>
             <h2>PASSWORD</h2>
-            <input type="password" class="Input_box" placeholder="Enter Your Password" spellcheck="false">
+            <input type="password" id="password" class="Input_box" placeholder="Enter Your Password" spellcheck="false" required> 
+            <button type="submit" class="Sign_In_Button">SIGN IN</button>
         </form>
-
-        <a href="../Search Page/Search Page.html"><button type="button" class="Sign_In_Button">SIGN IN</button></a> 
+        <!-- <a href="../Search Page/Search Page.html"></a> -->
     </div>
 </body>
 </html>

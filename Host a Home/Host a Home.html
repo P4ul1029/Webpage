@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Saira+Condensed&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
+    <script defer src="script.js"></script>
     <title>Host a Home</title>
 </head>
 <body>
@@ -46,15 +47,15 @@
         <option value="Malaysian ringgit">	Malaysian ringgit</option>
     </select>
 
-    <div class="House">
-        <h1>DESCRIPTION</h1>
-        <form>
+    <form id="form" action="/" method="GET">
+        <div class="House">
+            <h1>DESCRIPTION</h1>
             <h2>TITLE</h2>
-            <input type="text" class="Title" placeholder="Enter a Title" spellcheck="false">
+            <input type="text" id="title" class="Title" placeholder="Enter a Title" spellcheck="false">
             <h2>DESCRIPTION</h2> 
-            <textarea cols="30" rows="10"></textarea>
+            <textarea cols="30" rows="10" id="description"></textarea>
             <h2>PROPERTY TYPE</h2>
-            <select name="Properties" id="Properties">
+            <select name="Properties" id="properties">
                 <option value="Single Family">Single Family</option>
                 <option value="Apartment">Apartment</option>
                 <option value="Condo">Condo</option>
@@ -64,56 +65,53 @@
                 <option value="Mansion">Mansion</option>
                 <option value="Townhome">Townhome</option>
             </select>
-        </form>
-    </div>
-
-    <div class="Address">
-        <h1>ADDRESS</h1>
-        <form>
+        </div>
+    
+        <div class="Address">
+            <h1>ADDRESS</h1>
             <h2>STREET</h2>
-            <input type="text" placeholder="Enter a Street" spellcheck="false">
+            <input type="text" id="street" placeholder="Enter a Street" spellcheck="false" required>
             <h2>CITY</h2>
-            <input type="text" placeholder="Enter a City" spellcheck="false">
+            <input type="text" id="city" placeholder="Enter a City" spellcheck="false" required>
             <h2>STATE OR PROVINCE</h2>
-            <input type="text" placeholder="Enter a State or Province" spellcheck="false">
+            <input type="text" id="province" placeholder="Enter a State or Province" spellcheck="false" required>
             <h2>POSTAL CODE</h2>
-            <input type="text" placeholder="Enter a Postal Code" spellcheck="false">
+            <input type="text" id="postalCode" placeholder="Enter a Postal Code" spellcheck="false" required>
             <h2>COUNTRY</h2>
-            <input type="text" placeholder="Enter a Country" spellcheck="false">
-        </form>
-    </div>
-
-    <div class="Numbers">
-        <h1>THE NUMBERS</h1>
-        <form>
+            <input type="text" id="country" placeholder="Enter a Country" spellcheck="false" required>
+        </div>
+    
+        <div class="Numbers">
+            <h1>THE NUMBERS</h1>
+            <div id="error" class="error"></div>
             <label for="Bedroom"> BEDROOMS</label>
-            <input type="number" id="Bedroom">
-            <br>
-            <label for="Bathroom">BATHROOMS</label>
-            <input type="number" id="Bathroom">
-            <br>
-            <label for="Start_End">START DATE</label>
-            <input type="date" id="Start_End">
-            <br>
-            <div class="End_Date">
-                <label for="End_Date_Selection">END DATE</label>
-                <input type="date" id="End_Date_Selection">
+                <input type="number" id="Bedroom" min='0' required>
                 <br>
-                <p>OR</p>
-                <label for="Indefinitely">INDEFINITELY</label>
-                <input type="checkbox" id="Indefinitely" class="check">
+                <label for="Bathroom">BATHROOMS</label>
+                <input type="number" id="Bathroom" min='0' required>
                 <br>
-            </div>
-            <label for="Rate">DAILY RATE</label>
-            <input type="number" id="Rate">
-        </form>
-    </div>
-
-    <div class="Submission">
-        <h1>SUBMISSION</h1>
-        <h2>IMAGE</h2>
-        <input type="file" class="Image_Selection">
-        <button type="button" class="Sign_Up_Button" >SUBMIT</button>
-    </div>
+                <label for="Start_Date">START DATE</label>
+                <input type="date" id="Start_Date" required>
+                <br>
+                <div class="End_Date">
+                    <label for="End_Date_Selection">END DATE</label>
+                    <input type="date" id="End_Date_Selection">
+                    <br>
+                    <p>OR</p>
+                    <label for="Indefinitely">INDEFINITELY</label>
+                    <input type="checkbox" id="Indefinitely" class="check">
+                    <br>
+                </div>
+                <label for="Rate">DAILY RATE</label>
+                <input type="number" id="Rate" min='1' required>
+        </div>
+    
+        <div class="Submission">
+            <h1>SUBMISSION</h1>
+            <h2>IMAGE</h2>
+            <input type="file" id="image" class="Image_Selection" required>
+            <button type="submit" class="Sign_Up_Button" >SUBMIT</button>
+        </div>
+    </form>
 </body>
 </html>
