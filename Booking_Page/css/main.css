@@ -1,0 +1,80 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    font-family: 'Saira Condensed', sans-serif;
+    list-style-type: none;
+    border: none;
+    color: white;
+}
+
+.Logo{
+    width: 2.5em;
+    height: 2.5em;
+    margin-top: 0.5em;
+    margin-bottom: auto;
+    margin-left: 0.4em;
+    float: left;
+}
+
+nav{
+    background-color: rgb(65,105,225);
+    height: 60px;
+    width: 100%;
+    display: flex;
+    position: fixed;
+    top: 0;
+    font-weight: 600;
+}
+
+nav ul li{
+    display: block;
+    list-style-type: none;
+    line-height: 60px;
+    margin: 0 5px;
+    padding: 0 5px;   
+}
+
+nav ul{
+    margin-left: 8%;
+    margin-right: 8%;
+    flex-grow: 1;
+    justify-content: space-between;
+    display: flex;
+    font-size: large;
+}
+
+li:hover{
+    background: rgb(255,140,0);
+    cursor: pointer;
+}
+
+.Currencies{
+    background-color:rgb(255,140,0);
+    color:white;
+    border: none;
+    outline:none;
+    font-size: large;
+    font-weight: 600;
+    margin-top: 60px;
+    margin-bottom: 0;
+    margin-left: 0;
+    /* NEED JAVASCRIPT TO DISPLAY CURRENCIES DROPDOWN MENU */
+    display: none;
+}
+
+.Currencies option{
+    color: white;
+}
+
+.Host{
+    background-color: rgb(255,140,0);
+    padding: 0 5px;
+    border-radius: 5px;
+}
+
+@media (max-width: 550px){
+    li{
+        font-size: smaller;
+    }
+}
