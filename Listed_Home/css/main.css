@@ -50,7 +50,7 @@ li:hover{
 }
 
 .Currencies{
-    background-color:rgb(255,140,0);
+    background-color:rgb(65,105,225);
     color:white;
     border: none;
     outline:none;
@@ -59,8 +59,12 @@ li:hover{
     margin-top: 60px;
     margin-bottom: 0;
     margin-left: 0;
-    /* NEED JAVASCRIPT TO DISPLAY CURRENCIES DROPDOWN MENU */
     display: none;
+}
+
+.menus{
+    position: fixed;
+    top: 0;
 }
 
 .Currencies option{

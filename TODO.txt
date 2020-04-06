@@ -1,6 +1,5 @@
 NAVIGATION BAR
 - Log Out Button: Set up logging out (backend, PHP?).
-- Currency Button: Set up the currency dropdown menu (its currently on display : none in CSS)
 - Booked Homes Button: Provide a dropdown of all the homes the user has booked
 - Listed Homes Button: Provide a dropdown of all the homes the user has listed
 
