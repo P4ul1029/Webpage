@@ -181,6 +181,15 @@ li:hover{
     padding: 0 5px;
 }
 
+.error{
+    margin-bottom: 9px;
+    width: 100%;
+    text-align: center;
+    font-size: large;
+    font-weight: 600;
+    color: rgb(0, 0, 0);
+}
+
 .properties{
     width: 130px;
     float: right;
