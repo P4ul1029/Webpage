@@ -7,7 +7,15 @@ const closeModalBtn = document.querySelectorAll('[data-close-btn')
 const checkIn = document.getElementById('checkIn')
 const checkOut = document.getElementById('checkOut')
 const form = document.getElementById('form')
+const overlay = document.getElementById('overlay')
 const errorElem = document.getElementById('error')
+
+overlay.addEventListener('click', () => {
+    const modals = document.querySelectorAll('.filter.active')
+    modals.forEach(modal => {
+        closeModal(modal)
+    })
+})
 
 openModalBtn.forEach(label => {
     label.addEventListener('click', () =>{
@@ -27,12 +35,14 @@ function openModal(modal) {
     if (modal == null) return
 
     modal.classList.add('active')
+    overlay.classList.add('active')
 }
 
 function closeModal(modal) {
     if (modal == null) return
 
     modal.classList.remove('active')
+    overlay.classList.remove('active')
 }
 
 function toggling(id) {
