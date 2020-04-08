@@ -1,5 +1,6 @@
 const check = document.getElementById('check')
 const currencies = document.getElementById('Currencies')
+const bookedHomes = document.getElementById('BookedHomes')
 const search = document.getElementById('search')
 const openModalBtn = document.querySelectorAll('[data-modal-target]')
 const closeModalBtn = document.querySelectorAll('[data-close-btn')
@@ -41,16 +42,11 @@ function toggling(id) {
     } else {
         e.style.display = 'block';
     }
-    
-    if(!(e.style.position == 'fixed')){
-        e.style.position = 'fixed';
-    } else {
-        e.style.position = 'relative';
-    }
  }
 
- function hideCurrencies() {
+ function hideMenus() {
     currencies.style.display = 'none'
+    bookedHomes.style.display = 'none'
 }
 
 // Date validation

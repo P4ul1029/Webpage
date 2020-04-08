@@ -58,10 +58,4 @@ function toggling(id) {
     } else {
         e.style.display = 'block';
     }
-    
-    if(!(e.style.position == 'fixed')){
-        e.style.position = 'fixed';
-    } else {
-        e.style.position = 'relative';
-    }
 }

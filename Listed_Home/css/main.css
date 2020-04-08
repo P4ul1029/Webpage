@@ -49,6 +49,11 @@ li:hover{
     cursor: pointer;
 }
 
+.menus{
+    top: 60px;
+    position: fixed;
+}
+
 .Currencies{
     background-color:rgb(65,105,225);
     color:white;
@@ -56,19 +61,21 @@ li:hover{
     outline:none;
     font-size: large;
     font-weight: 600;
-    margin-top: 60px;
-    margin-bottom: 0;
-    margin-left: 0;
     display: none;
 }
 
-.menus{
-    position: fixed;
-    top: 0;
+option{
+    color: white;
 }
 
-.Currencies option{
-    color: white;
+.ListedHomes{
+    background-color:rgb(65,105,225);
+    color:white;
+    border: none;
+    outline:none;
+    font-size: large;
+    font-weight: 600;
+    display: none;
 }
 
 .Rent{

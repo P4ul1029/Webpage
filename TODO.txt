@@ -1,31 +1,8 @@
-NAVIGATION BAR
-- Log Out Button: Set up logging out (backend, PHP?).
-- Booked Homes Button: Provide a dropdown of all the homes the user has booked
-- Listed Homes Button: Provide a dropdown of all the homes the user has listed
+So in terms of things left, its:
+- User authentication
+- Taking inputted values from the search page and displaying house results in the results page. Clicking on one of the results takes you to the booking page (where you can book) with all that house's info
+- Storing inputted values from the Host a Home page into the database
+- Some pages have a BOOKED HOMES button on the topbar. When you click on this a dropdown menu of all the homes the user booked needs to appear. Clicking on one of the options takes you to the booked house page that displays that house's info
+- Some pages have a LISTED HOMES button on the topbar. When you click on this a dropdown menu of all the homes the user listed needs to appear. Clicking on one of the options takes you to the listed homes page that displays that house's info
 
-Sign In Page
-- Set up user authorization on the backend (PHP?)
-
-Sign Up Page
-- Store inputs into DB
-
-Search Page
-
-
-Results Page
-- Display matching houses based on inputs from the search page, i.e. query the DB for matching houses
-- Populate houses in a HTML table?
-
-Booking Page
-- If someone clicks on a house from the results page, this page must the house's information
-- Allow users to book the house and add their scheduled time to the DB
-
-Booked Page
-- If someone clicks on a house from the Booked Homes dropdown menu, display all the information about their booking
-
-Host a Home
-- Ensure only image files are uploaded
-- Create house in the DB based on inputs
-
-Listed Home Page
-- If someone clicks on a house from the Listed Homes dropdown menu, display all the info about that house and its bookings 
+Page transitions and displaying the info is more my end, getting all the info is more php so we can collaborate. Let me know if u need anything as well.

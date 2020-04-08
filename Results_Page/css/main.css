@@ -96,6 +96,11 @@ li:hover{
     border-radius: 5px;
 }
 
+.menus{
+    top: 60px;
+    position: fixed;
+}
+
 .Currencies{
     background-color:rgb(65,105,225);
     color:white;
@@ -103,19 +108,21 @@ li:hover{
     outline:none;
     font-size: large;
     font-weight: 600;
-    margin-top: 60px;
-    margin-bottom: 0;
-    margin-left: 0;
     display: none;
 }
 
-.menus{
-    position: fixed;
-    top: 0;
+option{
+    color: white;
 }
 
-.Currencies option{
-    color: white;
+.BookedHomes{
+    background-color:rgb(65,105,225);
+    color:white;
+    border: none;
+    outline:none;
+    font-size: large;
+    font-weight: 600;
+    display: none;
 }
 
 .Search_Box{
@@ -251,10 +258,10 @@ button:hover{
     }
     
     .menus{
-        top: 35px;
+        top: 95px;
     }
 
-    .Currencies{
+    .Currencies, .BookedHomes{
         font-size: medium;
     }
 
@@ -276,10 +283,6 @@ button:hover{
 
     #check:checked ~ .Unordered_List{
         display: flex;
-    }
-
-    #check:checked ~ .Currencies{
-        margin-top: 100px;
     }
 
     .Filters{

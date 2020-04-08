@@ -51,6 +51,11 @@ nav ul{
     font-size: large;
 }
 
+.menus{
+    top: 60px;
+    position: fixed;
+}
+
 .Currencies{
     background-color:rgb(65,105,225);
     color:white;
@@ -58,19 +63,21 @@ nav ul{
     outline:none;
     font-size: large;
     font-weight: 600;
-    margin-top: 60px;
-    margin-bottom: 0;
-    margin-left: 0;
     display: none;
 }
 
-.menus{
-    position: fixed;
-    top: 0;
+option{
+    color: white;
 }
 
-.Currencies option{
-    color: white;
+.BookedHomes{
+    background-color:rgb(65,105,225);
+    color:white;
+    border: none;
+    outline:none;
+    font-size: large;
+    font-weight: 600;
+    display: none;
 }
 
 .Host{

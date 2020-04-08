@@ -16,14 +16,14 @@
             <img src="images/Filter_Icon.png" alt="Logo" class="Filter_Icon">
         </label>
         <input class="checkbox" type="checkbox" id="check">
-        <label for="check" onclick="hideCurrencies();">
+        <label for="check" onclick="hideMenus();">
             <img src="images/Three_Lines.png" alt="Logo" class="Three_Lines">
         </label>
         <ul class="Unordered_List" id="Unordered_List">
             <li class="Filters"> <a data-modal-target="#filter">FILTERS</a></li>
             <li><a href="#" onclick="toggling('Currencies');">CURRENCY</a></li>
             <li><a class="Host" href="../Host_a_Home/Host_a_Home.html">HOST A HOME</a></li>
-            <li><a href="#">BOOKED HOMES</a></li>
+            <li><a href="#" onclick="toggling('BookedHomes');">BOOKED HOMES</a></li>
             <li><a href="../Sign_In_Page/Sign_In_Page.html">LOG OUT</a></li>
         </ul>
         <input type="text" class="Search_Box" placeholder="Location" id="search" spellcheck="false">
@@ -57,6 +57,10 @@
             <option value="New Taiwan dollar">New Taiwan dollar</option>
             <option value="Thai baht">Thai baht</option>
             <option value="Malaysian ringgit"> Malaysian ringgit</option>
+        </select>
+
+        <select name="BookedHomes" class="BookedHomes" id="BookedHomes">
+            <option value="None">None</option>
         </select>
     </div>
 
