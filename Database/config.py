@@ -1,6 +1,6 @@
 from configparser import ConfigParser
 
-def config(filename='db/database.ini', section='localhost'):
+def config(filename='database.ini', section='localhost'):
     """
         Fetches configurations
         :param filename: config file path

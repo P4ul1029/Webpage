@@ -9,11 +9,11 @@ from stage_three_schema_transfer import stage_three_DAL
 if __name__ == '__main__':
     print("BEGIN")
     init_schemas()
-    DataSource(populate_calendar_data=True,
+    data = DataSource(populate_calendar_data=True,
                populate_listings_data=True,
                populate_reviews_data=True)
 
-    DataSource.populate()
+    DataSource.populate(data)
 
     stage_one_DAL.insert_many()
     stage_two_DAL.insert_many()
