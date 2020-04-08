@@ -248,6 +248,24 @@ button:hover{
     cursor: pointer;
 }
 
+.table-container{
+    margin: 100px auto 0;
+    text-align: left;
+    background-color: 	black;
+    opacity: 0.75;
+    width: 90%;
+    padding: 0.5em 0.5em 1.2em 0.5em;
+    color: black;
+}
+
+.results-table{
+    color: white;
+    border: white solid 2px;
+    width: 90%;
+    margin: auto;
+}
+
+
 @media (max-width: 1300px){
     nav ul li{
         font-size: smaller;
