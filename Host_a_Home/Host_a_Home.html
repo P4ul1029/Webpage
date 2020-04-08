@@ -53,15 +53,15 @@
         </select>
     </div>
 
-    <form id="form" action="/" method="GET">
+    <form id="form" action="host.php" method="GET">
         <div class="House">
             <h1>DESCRIPTION</h1>
             <h2>TITLE</h2>
-            <input type="text" id="title" class="Title" placeholder="Enter a Title" spellcheck="false">
+            <input type="text" name="title" id="title" class="Title" placeholder="Enter a Title" spellcheck="false">
             <h2>DESCRIPTION</h2> 
-            <textarea cols="30" rows="10" id="description"></textarea>
+            <textarea cols="30" rows="10" name="description" id="description"></textarea>
             <h2>PROPERTY TYPE</h2>
-            <select name="Properties" id="properties">
+            <select name="Properties" name="propreties" id="properties">
                 <option value="Single Family">Single Family</option>
                 <option value="Apartment">Apartment</option>
                 <option value="Condo">Condo</option>
@@ -76,32 +76,32 @@
         <div class="Address">
             <h1>ADDRESS</h1>
             <h2>STREET</h2>
-            <input type="text" id="street" placeholder="Enter a Street" spellcheck="false" required>
+            <input type="text" name="street" id="street" placeholder="Enter a Street" spellcheck="false" required>
             <h2>CITY</h2>
-            <input type="text" id="city" placeholder="Enter a City" spellcheck="false" required>
+            <input type="text" name="city" id="city" placeholder="Enter a City" spellcheck="false" required>
             <h2>STATE OR PROVINCE</h2>
-            <input type="text" id="province" placeholder="Enter a State or Province" spellcheck="false" required>
+            <input type="text" name="province" id="province" placeholder="Enter a State or Province" spellcheck="false" required>
             <h2>POSTAL CODE</h2>
-            <input type="text" id="postalCode" placeholder="Enter a Postal Code" spellcheck="false" required>
+            <input type="text" name="postalCode" id="postalCode" placeholder="Enter a Postal Code" spellcheck="false" required>
             <h2>COUNTRY</h2>
-            <input type="text" id="country" placeholder="Enter a Country" spellcheck="false" required>
+            <input type="text" name="country" id="country" placeholder="Enter a Country" spellcheck="false" required>
         </div>
     
         <div class="Numbers">
             <h1>THE NUMBERS</h1>
                 <div id="error" class="error"></div>
                 <label for="Bedroom"> BEDROOMS</label>
-                <input type="number" id="Bedroom" min='0' required>
+                <input type="number" name="bedroom" id="Bedroom" min='0' required>
                 <br>
                 <label for="Bathroom">BATHROOMS</label>
-                <input type="number" id="Bathroom" min='0' required>
+                <input type="number" name="bathroom" id="Bathroom" min='0' required>
                 <br>
                 <label for="Start_Date">START DATE</label>
-                <input type="date" id="Start_Date" required>
+                <input type="date" name="Start_Date" id="Start_Date" required>
                 <br>
                 <div class="End_Date">
                     <label for="End_Date_Selection">END DATE</label>
-                    <input type="date" id="End_Date_Selection">
+                    <input type="date" name="End_Date" id="End_Date_Selection">
                     <br>
                     <p>OR</p>
                     <label for="Indefinitely">INDEFINITELY</label>
@@ -109,7 +109,7 @@
                     <br>
                 </div>
                 <label for="Rate">DAILY RATE</label>
-                <input type="number" id="Rate" min='1' required>
+                <input type="number" name="rate" id="Rate" min='1' required>
         </div>
     
         <div class="Submission">

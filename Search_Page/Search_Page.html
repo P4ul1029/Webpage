@@ -58,13 +58,13 @@
         <form id="form" action="/" method="GET">
             <div id="error" class="error"></div>
             <h2>WHERE</h2>
-            <input class="Where" id="where" type="text" placeholder="Location" spellcheck="false" required>
+            <input class="Where" name="where" id="where" type="text" placeholder="Location" spellcheck="false" required>
             <h2>CHECK-IN</h2>
-            <input type="date" id="checkIn" required>
+            <input type="date" name="checkIn" id="checkIn" required>
             <h2>CHECK OUT</h2>
-            <input type="date" id="checkOut" required>
+            <input type="date" name="checkOut" id="checkOut" required>
             <h2>NUMBER OF GUESTS</h2>
-            <input type="number" id="numberOfGuests"  min="1" required>
+            <input type="number" name="numberOfGuests" id="numberOfGuests"  min="1" required>
             <button type="submit" class="Search_btn">SEARCH</button>
         </form>
     </div>

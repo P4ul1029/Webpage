@@ -9,6 +9,9 @@ const checkOut = document.getElementById('checkOut')
 const form = document.getElementById('form')
 const errorElem = document.getElementById('error')
 
+var searchResult = <?php echo json_encode($userArray); ?>;
+
+
 openModalBtn.forEach(label => {
     label.addEventListener('click', () =>{
         const modal = document.querySelector(label.dataset.modalTarget)

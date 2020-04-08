@@ -50,6 +50,18 @@
         </select>
 
         <select name="ListedHomes" class="ListedHomes" id="ListedHomes">
+            <?php 
+                $config_path =  "../database_config.php";
+                include $config_path;
+                $listedHomesQuery = "FROM propreties_table";
+                $result = pg_query($db_connection, $listedHomesQuery);
+        
+                if($result) {
+                    while ($row = pg_fetch_row($result)){
+                    echo "<option value=\"home1\">" . $row['name'] . "</option>";
+                    }  
+                }
+            ?>
             <option value="None">None</option>
         </select>
     </div>
