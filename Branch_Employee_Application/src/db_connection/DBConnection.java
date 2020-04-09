@@ -13,10 +13,9 @@ public class DBConnection {
 			Connection conn = DriverManager.getConnection("jdbc:postgresql://web0.site.uottawa.ca:15432/group_140","pbara036","Garden4946");
 			
 			stmt = conn.createStatement();
-			rs = stmt.executeQuery("SELECT airbnb_group_40.properties_table.name, airbnb_group_40.users_table.name FROM airbnb_group_40.properties_table, airbnb_group_40.users_table WHERE airbnb_group_40.properties_table.host_id = airbnb_group_40.users_table.id");
+			rs = stmt.executeQuery("SELECT airbnb_group_40.properties_table.name, airbnb_group_40.users_table.name FROM airbnb_group_40.properties_table LEFT JOIN airbnb_group_40.users_table ON  airbnb_group_40.properties_table.host_id = airbnb_group_40.users_table.id");
 			
 			while(rs.next()) {
-				System.out.print("Column 1 returned: ");
 				System.out.println(rs.getString(1));
 			}
 			

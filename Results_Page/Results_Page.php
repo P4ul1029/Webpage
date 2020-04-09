@@ -183,7 +183,6 @@ var myTableDiv = document.getElementById("table-container");
 
             <tr>
                 <td class="tableHeader">NAME</td>
-                <td class="tableHeader">LOCATION</td>
                 <td class="tableHeader">PRICE</td>
             </tr>
         </table>
