@@ -258,11 +258,20 @@ button:hover{
     color: black;
 }
 
-.results-table{
+table{
     color: white;
-    border: white solid 2px;
     width: 90%;
     margin: auto;
+    border: white solid 2px;
+}
+
+tr,td{
+    border: white solid 1px;
+    padding: 0 2px;
+}
+
+.tableHeader{
+    font-size: large;
 }
 
 

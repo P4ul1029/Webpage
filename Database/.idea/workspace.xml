@@ -7,6 +7,23 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="Database" />
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -22,17 +39,46 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="postgresql" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Database - Copy/initialize.py" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
-  <component name="RunManager">
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Josh\Documents\Year5\Sem2\DBs\Database" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.main">
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Project" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="Project" type="Python.FlaskServer">
       <module name="Project" />
       <option name="target" value="$PROJECT_DIR$/app.py" />
@@ -48,6 +94,23 @@
       <option name="launchJavascriptDebuger" value="false" />
       <method v="2" />
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -64,6 +127,19 @@
       <workItem from="1585436639132" duration="1275000" />
       <workItem from="1585760436804" duration="14137000" />
       <workItem from="1585859855853" duration="189000" />
+      <workItem from="1585974802731" duration="19416000" />
+      <workItem from="1586208709044" duration="14971000" />
+      <workItem from="1586228428250" duration="361000" />
+      <workItem from="1586229470349" duration="1802000" />
+      <workItem from="1586269720090" duration="1684000" />
+      <workItem from="1586271924694" duration="4525000" />
+      <workItem from="1586279634997" duration="8279000" />
+      <workItem from="1586302150796" duration="16498000" />
+      <workItem from="1586352513122" duration="17844000" />
+      <workItem from="1586373473697" duration="1300000" />
+      <workItem from="1586375537252" duration="616000" />
+      <workItem from="1586377516278" duration="8246000" />
+      <workItem from="1586387489018" duration="678000" />
     </task>
     <servers />
   </component>
@@ -71,18 +147,80 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1585177060641">
+    <state x="275" y="0" width="816" height="728" key="#Intentions" timestamp="1586373054514">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
+    <state x="275" y="0" width="816" height="728" key="#Intentions/0.0.1366.728/1366.0.1280.680@0.0.1366.728" timestamp="1586373054514" />
+    <state x="275" y="22" key="#SQL_Dialects" timestamp="1586026950154">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="275" y="22" key="#SQL_Dialects/0.0.1366.728/1366.0.1280.680@0.0.1366.728" timestamp="1586026950154" />
+    <state x="275" y="22" width="952" height="683" key="#SQL_Resolution_Scopes" timestamp="1586372992238">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="275" y="22" width="952" height="683" key="#SQL_Resolution_Scopes/0.0.1366.728/1366.0.1280.680@0.0.1366.728" timestamp="1586372992238" />
+    <state x="113" y="17" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1586373954251">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="113" y="17" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728/1366.0.1280.680@0.0.1366.728" timestamp="1586373954251" />
+    <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1586352917244">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728/1366.0.1280.680@0.0.1366.728" timestamp="1586352917244" />
     <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1585177060641" />
-    <state x="0" y="0" key="com.intellij.ide.util.TipDialog" timestamp="1585859895312">
-      <screen x="0" y="0" width="1366" height="720" />
+    <state width="1323" height="178" key="GridCell.Tab.0.bottom" timestamp="1586387564929">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="178" key="GridCell.Tab.0.bottom/0.0.1366.728/1366.0.1280.680@0.0.1366.728" timestamp="1586387564929" />
+    <state width="1323" height="178" key="GridCell.Tab.0.center" timestamp="1586387564929">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="178" key="GridCell.Tab.0.center/0.0.1366.728/1366.0.1280.680@0.0.1366.728" timestamp="1586387564929" />
+    <state width="1323" height="178" key="GridCell.Tab.0.left" timestamp="1586387564928">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="178" key="GridCell.Tab.0.left/0.0.1366.728/1366.0.1280.680@0.0.1366.728" timestamp="1586387564928" />
+    <state width="1323" height="178" key="GridCell.Tab.0.right" timestamp="1586387564929">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="178" key="GridCell.Tab.0.right/0.0.1366.728/1366.0.1280.680@0.0.1366.728" timestamp="1586387564929" />
+    <state width="1323" height="223" key="GridCell.Tab.1.bottom" timestamp="1586229816936">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="223" key="GridCell.Tab.1.bottom/0.0.1366.728/1366.0.1280.680@0.0.1366.728" timestamp="1586229816936" />
+    <state width="1323" height="223" key="GridCell.Tab.1.center" timestamp="1586229816936">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="223" key="GridCell.Tab.1.center/0.0.1366.728/1366.0.1280.680@0.0.1366.728" timestamp="1586229816936" />
+    <state width="1323" height="223" key="GridCell.Tab.1.left" timestamp="1586229816936">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="223" key="GridCell.Tab.1.left/0.0.1366.728/1366.0.1280.680@0.0.1366.728" timestamp="1586229816936" />
+    <state width="1323" height="223" key="GridCell.Tab.1.right" timestamp="1586229816936">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="223" key="GridCell.Tab.1.right/0.0.1366.728/1366.0.1280.680@0.0.1366.728" timestamp="1586229816936" />
+    <state x="184" y="6" key="SettingsEditor" timestamp="1586027130242">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="184" y="6" key="SettingsEditor/0.0.1366.728/1366.0.1280.680@0.0.1366.728" timestamp="1586027130242" />
+    <state width="200" height="441" key="SqlResolveConfigurable" timestamp="1586372450588">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="200" height="441" key="SqlResolveConfigurable/0.0.1366.728/1366.0.1280.680@0.0.1366.728" timestamp="1586372450588" />
+    <state x="0" y="0" key="com.intellij.ide.util.TipDialog" timestamp="1586387489745">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="0" y="0" key="com.intellij.ide.util.TipDialog/0.0.1366.720/1366.0.1280.680@0.0.1366.720" timestamp="1585859895312" />
+    <state x="0" y="0" key="com.intellij.ide.util.TipDialog/0.0.1366.728/1366.0.1280.680@0.0.1366.728" timestamp="1586387489745" />
     <state x="0" y="0" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1585166592398" />
     <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1585091114222">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1585091114222" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Database$main.coverage" NAME="main Coverage Results" MODIFIED="1586387564900" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Database$Project.coverage" NAME="Project Coverage Results" MODIFIED="1586229698913" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

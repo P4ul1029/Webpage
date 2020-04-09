@@ -1,4 +1,4 @@
-import DBConnect
+from DBConnect import DatabaseConnection
 
 
 class stage_two_DAL(object):
@@ -15,17 +15,18 @@ class stage_two_DAL(object):
         Copies data from listings table into the bookings table and other associated tables
         :return: None
         """
-        db = DBConnect()
+        db = DatabaseConnection()
+        connection = db.get_connection()
 
         sql_insert = """INSERT INTO AirBnB_Group_40.addresses_table(
-	                            street_name,
-	                            city,
-	                            province,
-	                            country_id,
-	                            postal_code)
-	                        SELECT (street, city, state, (SELECT Country.id FROM AirBnB_Group_40.countries_table Country WHERE Country.name = country), zipcode)
-	                        FROM data_source.listings_table
-	                    """
+                            street_name, 
+                            city,
+                            province,
+                            country_id,
+                            postal_code)
+                        SELECT (street, city, state, (SELECT Country.id FROM AirBnB_Group_40.countries_table Country WHERE Country.name = country), zipcode)
+	                    FROM data_source.listings_data"""
 
-        with db.get_connection().cursor() as cursor:
+        with connection.cursor() as cursor:
             cursor.execute(sql_insert)
+            connection.close()

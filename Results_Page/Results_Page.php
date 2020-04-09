@@ -6,7 +6,73 @@
     <link href="https://fonts.googleapis.com/css?family=Saira+Condensed&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
     <title>Results Page</title>
+    <script type="text/javascript">
+        
+        
+window.addEventListener('load', function() {
+    
+    var searchResultList = <?php
+    $config_path =  "../database_config.php";
+    include $config_path;
+
+    if ($_SERVER["REQUEST_METHOD"] == "GET") {
+        
+        $where = $_GET["where"];
+        $checkIn = $_GET["checkIn"];
+        $checkOut = $_GET["checkOut"];
+        $numberOfGuests = $_GET["numberOfGuests"];
+        
+        $searchQuery = "
+            SELECT p.name, p.country_id, p.rate
+            FROM AirBnB_Group_40.properties_table p
+	        LEFT JOIN AirBnB_Group_40.bookings_table b ON p.id = b.property_id
+            WHERE p.start_date = b.check_in_date AND p.end_date = b.check_out_date;";
+        
+        $result = pg_query($db_connection, $searchQuery);
+        
+        if($result) {
+            $array = pg_fetch_all($result);
+        
+        echo json_encode($array);
+     } 
+    }
+            ?>;
+    
+var myTableDiv = document.getElementById("table-container");
+      
+    var table = document.getElementById('results-table');
+    
+    var tableBody = document.createElement('TBODY');
+    table.appendChild(tableBody);
+      
+    for (var i=0; i<searchResultList.length; i++){
+       var tr = document.createElement('tr');
+       tableBody.appendChild(tr);
+       
+       for (var j=0; j<3; j++){
+           var name = document.createElement('td');
+           var location = document.createElement('td');
+           var price = document.createElement('td');
+
+           name.appendChild(document.createTextNode(searchResultList[i]["name"]));
+           location.appendChild(document.createTextNode(searchResultList[i]["location"]));
+           price.appendChild(document.createTextNode(searchResultList[i]["price"]));
+
+       }
+        tr.appendChild(name);
+        tr.appendChild(location);
+        tr.appendChild(price);
+
+
+    }
+    myTableDiv.appendChild(table);
+})
+
+        
+    </script> 
     <script defer src="script.js"></script>
+       
+
 </head>
 <body>
     <nav>
@@ -114,6 +180,12 @@
     <div class="table-container" id="table-container">
         <h1>RESULTS</h1>
         <table class="results-table" id="results-table">
+
+            <tr>
+                <td class="tableHeader">NAME</td>
+                <td class="tableHeader">LOCATION</td>
+                <td class="tableHeader">PRICE</td>
+            </tr>
         </table>
     </div>
 </body>
