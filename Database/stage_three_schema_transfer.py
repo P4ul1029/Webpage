@@ -22,18 +22,15 @@ class stage_three_DAL(object):
 	                            id,
 	                            name,
 	                            description,
-	                            host_id,
-	                            room_type_id,
-	                            address_id,
 	                            bedroom_count,
 	                            bathroom_count,
 	                            accomodates_count,
 	                            rating,
-	                            country_id)
-	                        SELECT (id, name, description, host_id, (SELECT room.id FROM AirBnB_Group_40.room_type_table room WHERE room.name = room_type),
-	                                (SELECT addy.id FROM AirBnB_Group_40.addresses_table addy WHERE (addy.street = street)),
-	                                bedrooms, bathrooms, accomodates, review_scores_rating,
-	                                (SELECT Country.id FROM AirBnB_Group_40.countries_table Country WHERE Country.name = country)"""
+	                            rate)
+	                        SELECT id, name, description,
+	                               bedrooms, bathrooms, accomodates, review_scores_rating, CAST(CAST(price AS NUMERIC) AS FLOAT)
+	                        FROM data_source.listings_data
+	                                ON CONFLICT DO NOTHING"""
 
 
         with connection.cursor() as cursor:

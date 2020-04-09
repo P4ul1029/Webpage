@@ -22,10 +22,10 @@ class stage_two_DAL(object):
                             street_name, 
                             city,
                             province,
-                            country_id,
                             postal_code)
-                        SELECT (street, city, state, (SELECT Country.id FROM AirBnB_Group_40.countries_table Country WHERE Country.name = country), zipcode)
-	                    FROM data_source.listings_data"""
+                        SELECT street, city, state, zipcode
+	                    FROM data_source.listings_data
+	                    ON CONFLICT DO NOTHING"""
 
         with connection.cursor() as cursor:
             cursor.execute(sql_insert)
