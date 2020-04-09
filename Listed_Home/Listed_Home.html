@@ -53,7 +53,8 @@
             <?php 
                 $config_path =  "../database_config.php";
                 include $config_path;
-                $listedHomesQuery = "FROM propreties_table";
+                $host_id = $_SESSION["id"];
+                $listedHomesQuery = "SELECT * FROM AirBnB_Group_40.propreties_table WHERE host_id = '$host_id'";
                 $result = pg_query($db_connection, $listedHomesQuery);
         
                 if($result) {

@@ -18,7 +18,8 @@
 
         //query
         //if query successful
-        $signUpQuery = "INSERT INTO AirBnB_Group_40.users_table (name, email, password, phone_number, created_at, modified_at) VALUES ('$lastName', '$email', '$password', '$number', '$timestamp', '$timestamp' )";
+        $randomId = rand(100, 999);
+        $signUpQuery = "INSERT INTO AirBnB_Group_40.users_table (id, name, email, password, phone_number, created_at, modified_at) VALUES ('$randomId', '$lastName', '$email', '$password', '$number', '$timestamp', '$timestamp' , active)";
         
         $result = pg_query($db_connection, $signUpQuery);
         

@@ -11,7 +11,12 @@
         $checkOut = $_GET["checkOut"];
         $numberOfGuests = $_GET["numberOfGuests"];
         
-        $searchQuery = "";
+        $searchQuery = "CREATE VIEW UnrentedProperties AS
+            SELECT p.*
+            FROM AirBnB_Group_40.properties_table p
+            WHERE p.start_date = '$checkIn' and p.end_date = '$checkOut' and accomodates_count = '$numberOfGuests'
+            LEFT OUTER JOIN AirBnB_Group_40.bookings_table ON p.id = b.property_id;";
+        
         $result = pg_query($db_connection, $searchQuery);
         
         if($result) {

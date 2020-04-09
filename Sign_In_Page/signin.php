@@ -13,14 +13,16 @@
         $password = $_POST["password"];
         
 
+        
         $signInQuery = "SELECT * FROM AirBnB_Group_40.users_table WHERE email = '$email' and password = '$password'";
         $result = pg_query($db_connection, $signInQuery);
         
         if($result) {
             $_SESSION["email"] = $email;
+            $_SESSION["id"] = $result["id"];
             header('Location: /temp/Webpage/Search_Page/Search_Page.html');
         }
-
+        
     }
 
 ?>

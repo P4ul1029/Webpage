@@ -6,6 +6,7 @@
 
     if ($_SERVER["REQUEST_METHOD"] == "GET") { 
         
+        $host_id = $_SESSION["id"];
         $title = $_GET["title"];
         $description = $_GET["description"];
         $propreties = $_GET["propreties"];
@@ -25,7 +26,12 @@
         
         $rate = $_GET["rate"];
         
-        $postQuery = "";
+        $timestamp = date('Y-m-d H:i:s');
+
+        
+        $randomId = rand(100, 999);
+        $postQuery = "INSERT INTO AirBnB_Group_40.propreties_table (id, name, description, host_id, bedroom_count, bathroom_count, start_date, end_date, created_at, modified_at, status) VALUES ('$randomId', '$title', '$description', '$host_id', '$bedrooms', '$bathrooms', '$startDate', '$endDate', 
+        '$timestamp', '$timestamp', active)";
         
         $result = pg_query($db_connection, $postQuery);
         

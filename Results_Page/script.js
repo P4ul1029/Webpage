@@ -10,7 +10,29 @@ const form = document.getElementById('form')
 const overlay = document.getElementById('overlay')
 const errorElem = document.getElementById('error')
 
-var searchResultList = <?php echo json_encode($userArray); ?>;
+var searchResultList = [["House1", "House11"], ["House2", "House21"]];//<?php echo json_encode($userArray); ?>;
+
+window.addEventListener('load', function() {
+var myTableDiv = document.getElementById("table-container");
+      
+    var table = document.getElementById('results-table');
+    
+    var tableBody = document.createElement('TBODY');
+    table.appendChild(tableBody);
+      
+    for (var i=0; i<searchResultList.length; i++){
+       var tr = document.createElement('tr');
+       tableBody.appendChild(tr);
+       
+       for (var j=0; j<searchResultList[0].length; j++){
+           var td = document.createElement('td');
+           td.appendChild(document.createTextNode(searchResultList[i][j]));
+           tr.appendChild(td);
+       }
+    }
+    myTableDiv.appendChild(table);
+})
+
 
 overlay.addEventListener('click', () => {
     const modals = document.querySelectorAll('.filter.active')
