@@ -1,7 +1,7 @@
 <?php 
 
     $username = "amerc084";
-    $password = "Jbrdg99824.";
+    $password = "";
     $host = "web0.eecs.uottawa.ca";
     $port = "15432";
     $database_name = "group_140";
